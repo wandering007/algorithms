@@ -17,7 +17,7 @@ int lowbit(int x)
 
 void update(int i, int delta)
 {
-	while(i <= MaxVal)//MaxVal —— maximum value which will have non-zero frequency
+	while(i <= MaxVal) // MaxVal —— maximum value which will have non-zero frequency
 	{
 		BIT[i] += delta;
 		i += lowbit(i);
@@ -28,10 +28,9 @@ void update(int i, int delta)
 int query(int k)
 {
     int ans = 0;
-    while(k > 0)
-    {
-    	ans += BIT[k];
-    	k -= lowbit(k);
+    while (k > 0) {
+        ans += BIT[k];
+        k -= lowbit(k);
     }
     return ans;
 }
@@ -44,26 +43,23 @@ int querySingle(int idx)
 	if (idx > 0)
 	{ // special case
 		int z = idx - lowbit(idx); // make z first
-		--idx; // idx is no important any more, so instead y, you can use idx
-		while (idx != z)
-		{ // at some iteration idx (y) will become z
+		--idx;
+		while (idx != z) {
 			sum -= BIT[idx]; 
-		// substruct BIT frequency which is between y and "the same path"
+		  // substruct BIT frequency which is between y and "the same path"
 			idx -= lowbit(idx);
-		}
+		} // finally idx will become z
 	}
 	return sum;
 }
 
 //Scaling the entire BIT by a constant factor c
-void scale(int c)//c is maybe not an integer
+void scale(int c) //c is maybe not an integer
 {
-	void scale(int c)
-	{
-	   for (int i = 1 ; i <= MaxVal; i++)
-			BIT[i] *= c; 
-	  //here we assume that c is used to multiply the original frenquency(maybe divide)
-    }
+    for (int i = 1 ; i <= MaxVal; i++)
+			BIT[i] *= c;
+    // here we assume that c is used to multiply the original frenquency(maybe
+    // divide)
     return;
 }
 
