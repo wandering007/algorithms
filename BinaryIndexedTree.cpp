@@ -1,4 +1,4 @@
-//A Fenwick BIT or binary indexed tree is a data structure providing efficient methods 
+//A Fenwick tree or binary indexed tree is a data structure providing efficient methods 
 //for calculation and manipulation of the prefix sums of a table of values. 
 
 //1D version
