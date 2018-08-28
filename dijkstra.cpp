@@ -21,7 +21,7 @@ int minDistance(int dist[], bool sptSet[]) {
 
 // Function that implements Dijkstra's single source shortest path algorithm
 // for a graph represented using adjacency matrix representation
-void dijkstra(int A[V][V], int src) {
+void Dijkstra(int A[V][V], int src) {
     int dist[V];  // The output array.  dist[i] will hold the shortest
                   // distance from src to i
 
