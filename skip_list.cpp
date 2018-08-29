@@ -2,6 +2,7 @@
 // Based on https://www.geeksforgeeks.org/skip-list-set-2-insertion/
 // C++ code for searching and deleting element in skip list
 // Based on https://www.geeksforgeeks.org/skip-list-set-3-searching-deletion/
+// reference: ftp://ftp.cs.umd.edu/pub/skipLists/skiplists.pdf
 
 #include <bits/stdc++.h>
 
