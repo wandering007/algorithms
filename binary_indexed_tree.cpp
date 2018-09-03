@@ -10,7 +10,8 @@
 // (idx - 2^r + 1) to index idx. We also write that idx is responsible for
 // indexes from (idx - 2^r + 1) to idx.
 
-// Sample C Implementation
+// based on
+// https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/
 
 int lowbit(int x) { return x & (-x); }
 
@@ -33,8 +34,8 @@ int query(int k) {
 }
 
 // the actual frequency at a position idx can be calculated by calling function
-// qeury twice
-// f[idx] = query(idx) - query(idx - 1), but the function below is faster
+// qeury twice f[idx] = query(idx) - query(idx - 1), but the function below is
+// faster
 int querySingle(int idx) {
     int sum = BIT[idx];             // sum will be decreased
     if (idx > 0) {                  // special case
@@ -69,37 +70,40 @@ void scale(int c)  // c is maybe not an integer
 int find(int cumFre) {
     int idx = 0;  // this var is result of function
 
-    while ((bitMask != 0) && (idx < MaxVal)) {  // nobody likes overflow :)
-        int tIdx = idx + bitMask;               // we make midpoint of interval
-        if (cumFre == BIT[tIdx])  // if it is equal, we just return idx
+    while (bitMask != 0) {
+        int tIdx = idx + bitMask;     // we make midpoint of interval
+        bitMask >>= 1;                // half current interval
+        if (tIdx > MaxVal) continue;  // avoid overflow
+        if (cumFre == BIT[tIdx])      // if it is equal, we just return idx
             return tIdx;
         else if (cumFre > BIT[tIdx]) {  // if BIT frequency "can fit" into
                                         // cumFre, then include it
             idx = tIdx;                 // update index
             cumFre -= BIT[tIdx];        // set frequency for next loop
         }
-        bitMask >>= 1;  // half current interval
     }
     if (cumFre != 0)  // maybe given cumulative frequency doesn't exist
         return -1;
     else
         return idx;
 }
+
 // if in BIT exists more than one index with a same
 // cumulative frequency, this procedure will return
 // the greatest one
 int findG(int cumFre) {
     int idx = 0;
 
-    while ((bitMask != 0) && (idx < MaxVal)) {
+    while (bitMask != 0) {
         int tIdx = idx + bitMask;
-        if (cumFre >=
-            BIT[tIdx]) {  // if current cumulative frequency is equal to cumFre,
-                          // we are still looking for higher index (if exists)
+        bitMask >>= 1;
+        if (tIdx > MaxVal) continue;
+        if (cumFre >= BIT[tIdx]) {
+            // if current cumulative frequency is equal to cumFre,
+            // we are still looking for higher index (if exists)
             idx = tIdx;
             cumFre -= BIT[tIdx];
         }
-        bitMask >>= 1;
     }
     if (cumFre != 0)
         return -1;
@@ -108,13 +112,31 @@ int findG(int cumFre) {
 }
 // Time complexity: O(log MaxVal)
 
-// Sample C++ Implementation(a bit different idea)
+// 2D version
 
+int lowbit(int t) { return t & (-t); }
+
+void update(int i, int j, int delta) {
+    A[i][j] += delta;
+    for (int x = i; x <= MaxVal_X; x += lowbit(x))
+        for (int y = j; y <= MaxVal_Y; y += lowbit(y)) BIT[x][y] += delta;
+    return;
+}
+
+int query(int i, int j) {
+    int result = 0;
+    for (int x = i; x > 0; x -= lowbit(x))
+        for (int y = j; y > 0; y -= lowbit(y)) result += BIT[x][y];
+    return result;
+}
+
+//多维树状数组与一维二维树状数组实现很相似，只是在查询区间时注意容斥原理的使用
+
+// Sample C++ Implementation(a bit different idea)
 class Fenwick_BIT_Sum {
     vector<int> BIT;
-    Fenwick_BIT_Sum(const vector<int>&
-                        Arg)  // Arg is our array on which we are going to work
-    {
+    // Arg is our array on which we are going to work
+    Fenwick_BIT_Sum(const vector<int>& Arg) {
         BIT.resize(Arg.size());
         for (int i = 0; i < BIT.size(); ++i) increase(i, Arg[i]);
     }
@@ -141,23 +163,3 @@ class Fenwick_BIT_Sum {
         return sum;
     }
 };
-
-// 2D version
-
-int lowbit(int t) { return t & (-t); }
-
-void update(int i, int j, int delta) {
-    A[i][j] += delta;
-    for (int x = i; x <= MaxVal_X; x += lowbit(x))
-        for (int y = j; y <= MaxVal_Y; y += lowbit(y)) BIT[x][y] += delta;
-    return;
-}
-
-int query(int i, int j) {
-    int result = 0;
-    for (int x = i; x > 0; x -= lowbit(x))
-        for (int y = j; y > 0; y -= lowbit(y)) result += BIT[x][y];
-    return result;
-}
-
-//多维树状数组与一维二维树状数组实现很相似，只是在查询区间时注意容斥原理的使用

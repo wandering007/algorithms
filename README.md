@@ -2,6 +2,7 @@
 A collection of commonly used algorithms, written in C/C++, java, Python...   
 - Data Structures
     - [Fenwick tree/Binary indexed tree](https://github.com/wandering007/algorithms/blob/master/binary_indexed_tree.cpp)
+    - [Segment tree](https://github.com/wandering007/algorithms/blob/master/segment_tree.cpp)  
     - [Skip list](https://github.com/wandering007/algorithms/blob/master/skip_list.cpp)   
 - Graph Theory  
     - Shortest path: [Dijstra](https://github.com/wandering007/algorithms/blob/master/dijkstra.cpp) | [Bellman-Ford](https://github.com/wandering007/algorithms/blob/master/bellman_ford.cpp)  
