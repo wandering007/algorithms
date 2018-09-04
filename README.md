@@ -8,7 +8,9 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
     - Shortest path: [Dijstra](https://github.com/wandering007/algorithms/blob/master/dijkstra.cpp) | [Bellman-Ford](https://github.com/wandering007/algorithms/blob/master/bellman_ford.cpp)  
 - Search  
     - [K_{th} element selection](https://github.com/wandering007/algorithms/blob/master/kth_element_selection.cpp)
-    - [Knuth–Morris–Pratt algorithm](https://github.com/wandering007/algorithms/blob/master/kmp.cpp)
+    - [Knuth–Morris–Pratt algorithm](https://github.com/wandering007/algorithms/blob/master/kmp.cpp)  
+- Efficient Computation  
+    - [Modular exponentiation](https://github.com/wandering007/algorithms/blob/master/modular_pow.cpp)
 - Image Processing  
     - Gabor Filter: `GaborFilter.py`
 
