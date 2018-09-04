@@ -3,8 +3,6 @@
 // log n) storage and can built in O(n log n) time. Segment trees support
 // searching for all the intervals that contain a query point in O(log n + k), k
 // being the number of retrieved intervals or segments.
-// The segment tree can be generalized to higher dimension spaces. The structure
-// uses O(nlog^d n) storage, and answers queries in O(log^d n).
 
 #define LCHILD node << 1, l, m
 #define RCHILD node << 1, m + 1, r
@@ -83,3 +81,6 @@ int query(int L, int R, int node = 1, int l = 1, int r = N) {
     if (R > m) ans += query(L, R, RCHILD);
     return ans;
 }
+
+// The segment tree can be generalized to higher dimension spaces. The structure
+// uses O(nlog^d n) storage, and answers queries in O(log^d n).
