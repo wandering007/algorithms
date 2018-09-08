@@ -1,3 +1,6 @@
+#include <algorithm>
+#include <iostream>
+
 //	heap sort is unstable
 //	adjust the binary tree to establish the heap
 void adjust(element a[], int root, int n) {
@@ -20,7 +23,7 @@ void HeapSort(element a[], int n) {  //	perform a  heap sort on a[1 : n]
     for (int i = n; i > 1; --i) {
         std::cout << a[1].key
                   << "\t";  //	print sorted sequence from max to min
-        swap(a[1], a[i]);
+        std::swap(a[1], a[i]);
         adjust(a, 1, i - 1);  // log n
     }
     std::cout << a[1].key << "\n";
