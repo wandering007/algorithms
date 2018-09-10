@@ -37,7 +37,7 @@ void GrahamScan_2D()  // Graham Scan只能用于2D情况，时间复杂度O(nlog
     tempoint = point[0];
     point[0] = point[pos];  // 找出y最小的点中x最小的点
     point[pos] = temp;
-    sort(point + 1, point + n, cmp);  //复杂度主要在于排序，O(n*log n)
+    sort(point + 1, point + n, cmpoint);  //复杂度主要在于排序，O(n*log n)
     point[n] = point[0];
     S[0] = point[0];
     S[1] = point[1];
@@ -61,8 +61,9 @@ bool ccmp(POINT a, POINT b) {
 
 int chainHull_2D()  // simple implementation,时间复杂度O(nlogn)
 {
+     // sorted by increasing x and y-coordinates
     sort(point, point + MAX_SIZE + 1,
-         ccmp);  // sorted by increasing x and y-coordinates
+         ccmp);
     // Build lower hull
     int top = -1;
     for (int i = 0; i < n; i++) {
