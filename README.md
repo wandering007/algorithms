@@ -17,6 +17,7 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
     - [Convex hull](https://github.com/wandering007/algorithms/blob/master/convex_hull.cpp)  
 - Number Theory  
     - [Greatest common divisor](https://github.com/wandering007/algorithms/blob/master/gcd.cpp)  
+    - [Extended Euclidean algorithm](https://github.com/wandering007/algorithms/blob/master/extended_gcd.cpp)  
 - Efficient Computation  
     - [Modular exponentiation](https://github.com/wandering007/algorithms/blob/master/modular_pow.cpp)
     - [Hamming distance](https://github.com/wandering007/algorithms/blob/master/hamming_distance.cpp)  
