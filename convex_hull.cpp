@@ -61,9 +61,8 @@ bool ccmp(POINT a, POINT b) {
 
 int chainHull_2D()  // simple implementation,时间复杂度O(nlogn)
 {
-     // sorted by increasing x and y-coordinates
-    sort(point, point + MAX_SIZE + 1,
-         ccmp);
+    // sorted by increasing x and y-coordinates
+    sort(point, point + MAX_SIZE + 1, ccmp);
     // Build lower hull
     int top = -1;
     for (int i = 0; i < n; i++) {
