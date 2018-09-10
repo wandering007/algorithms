@@ -5,8 +5,9 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
     - [Segment tree](https://github.com/wandering007/algorithms/blob/master/segment_tree.cpp)  
     - [Skip list](https://github.com/wandering007/algorithms/blob/master/skip_list.cpp)   
 - Graph Theory  
-    - Shortest path: [Dijstra](https://github.com/wandering007/algorithms/blob/master/dijkstra.cpp) | [Bellman-Ford](https://github.com/wandering007/algorithms/blob/master/bellman_ford.cpp)  
+    - Shortest path: [Dijstra](https://github.com/wandering007/algorithms/blob/master/dijkstra.cpp) | [Bellman-Ford](https://github.com/wandering007/algorithms/blob/master/bellman_ford.cpp) | [Floyd–Warshall](https://github.com/wandering007/algorithms/blob/master/floyd_warshall.cpp)  
     - [Lowest common ancestor](https://github.com/wandering007/algorithms/blob/master/lowest_common_ancestor.cpp)  
+    - [Largest independent set in a binary tree](https://github.com/wandering007/algorithms/blob/master/largest_independent_set.c)  
 - Search  
     - [K_{th} element selection](https://github.com/wandering007/algorithms/blob/master/kth_element_selection.cpp)
     - [Knuth–Morris–Pratt algorithm](https://github.com/wandering007/algorithms/blob/master/kmp.cpp)  
