@@ -4,6 +4,8 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
     - [Fenwick tree/Binary indexed tree](https://github.com/wandering007/algorithms/blob/master/binary_indexed_tree.cpp)
     - [Segment tree](https://github.com/wandering007/algorithms/blob/master/segment_tree.cpp)  
     - [Skip list](https://github.com/wandering007/algorithms/blob/master/skip_list.cpp)   
+    - Strings  
+        - [Longest common subsequence](https://github.com/wandering007/algorithms/blob/master/longest_common_subsequence.java)  
 - Graph Theory  
     - Shortest path: [Dijstra](https://github.com/wandering007/algorithms/blob/master/dijkstra.cpp) | [Bellman-Ford](https://github.com/wandering007/algorithms/blob/master/bellman_ford.cpp) | [Floyd–Warshall](https://github.com/wandering007/algorithms/blob/master/floyd_warshall.cpp)  
     - [Lowest common ancestor](https://github.com/wandering007/algorithms/blob/master/lowest_common_ancestor.cpp)  
@@ -22,7 +24,8 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
     - [Modular exponentiation](https://github.com/wandering007/algorithms/blob/master/modular_pow.cpp)
     - [Hamming distance](https://github.com/wandering007/algorithms/blob/master/hamming_distance.cpp)  
 - Image Processing  
-    - Gabor filter: `GaborFilter.py`  
+    - [Gabor filter](https://github.com/wandering007/algorithms/blob/master/gabor_filter.py)  
+    - [Hough transform](https://github.com/wandering007/algorithms/blob/master/hough_transform.py)
 - Utility  
     - [Date recorder](https://github.com/wandering007/algorithms/blob/master/date_recorder.cpp)
 
