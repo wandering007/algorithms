@@ -8,12 +8,12 @@ def longest_increasing_subsequence(X):
     M = [0] * (N + 1)
     L = 0
     for i in range(N):
-    # Binary search for the largest positive j <= L
+        # Binary search for the largest positive j <= L
         lo = 1
         hi = L
         while lo <= hi:
-            mid = (lo + hi) // 2
-            if X[ M[mid] ] < X[i]:
+            mid = (lo + hi + 1) // 2
+            if X[M[mid]] < X[i]:
                 lo = mid + 1
             else:
                 hi = mid - 1

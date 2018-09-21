@@ -13,8 +13,10 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
 - Search  
     - [K_{th} element selection](https://github.com/wandering007/algorithms/blob/master/kth_element_selection.cpp)
     - [Knuth–Morris–Pratt algorithm](https://github.com/wandering007/algorithms/blob/master/kmp.cpp)  
+    - [Longest increasing subsequence](https://github.com/wandering007/algorithms/blob/master/longest_increasing_subsequence.py)
 - Sorting  
     - [Heap sort](https://github.com/wandering007/algorithms/blob/master/sorting/heap_sort.cpp)
+    - [Patience sort](https://github.com/wandering007/algorithms/blob/master/sorting/patience_sort.cpp)
 - Computational Geometry  
     - [Convex hull](https://github.com/wandering007/algorithms/blob/master/convex_hull.cpp)  
 - Number Theory  
