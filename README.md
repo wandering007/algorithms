@@ -30,8 +30,9 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
 - Image Processing  
     - [Gabor filter](https://github.com/wandering007/algorithms/blob/master/gabor_filter.py)  
     - [Hough transform](https://github.com/wandering007/algorithms/blob/master/hough_transform.py)
-- Utility  
-    - [Date recorder](https://github.com/wandering007/algorithms/blob/master/date_recorder.cpp)
+- Utilities  
+    - [Date recorder](https://github.com/wandering007/algorithms/blob/master/date_recorder.cpp)  
+    - [Number/String conversion](https://github.com/wandering007/algorithms/blob/master/num_str_conversion.cpp)
 
 ## Needing improvements  
 - Convex hull Marriage-before-Conquest and 3D version  
