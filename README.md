@@ -9,6 +9,7 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
 - Graph Theory  
     - [Lowest common ancestor](https://github.com/wandering007/algorithms/blob/master/lowest_common_ancestor.cpp)  
     - [Largest independent set in a binary tree](https://github.com/wandering007/algorithms/blob/master/largest_independent_set.c) 
+    - [Threaded binary tree](https://github.com/wandering007/algorithms/blob/master/threaded_binary_tree.cpp)  
     - [Morris Traversal](https://github.com/wandering007/algorithms/blob/master/morris_traversal.cpp)
     - Shortest path: [Dijstra](https://github.com/wandering007/algorithms/blob/master/dijkstra.cpp) | [Bellman-Ford](https://github.com/wandering007/algorithms/blob/master/bellman_ford.cpp) | [Floyd–Warshall](https://github.com/wandering007/algorithms/blob/master/floyd_warshall.cpp)  
 
