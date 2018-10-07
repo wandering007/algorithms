@@ -18,6 +18,8 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
     - [Knuth–Morris–Pratt algorithm](https://github.com/wandering007/algorithms/blob/master/kmp.cpp)  
     - [Longest increasing subsequence](https://github.com/wandering007/algorithms/blob/master/longest_increasing_subsequence.py)
 - Sorting  
+    - [Quick sort](https://github.com/wandering007/algorithms/blob/master/sorting/quick_sort.cpp)  
+    - [Merge sort](https://github.com/wandering007/algorithms/blob/master/sorting/merge_sort.cpp)  
     - [Heap sort](https://github.com/wandering007/algorithms/blob/master/sorting/heap_sort.cpp)
     - [Patience sort](https://github.com/wandering007/algorithms/blob/master/sorting/patience_sort.cpp)
 - Computational Geometry  
