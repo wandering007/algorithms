@@ -3,7 +3,7 @@
 // 2D version
 #define DataType double
 #define MAX_SIZE
-typointedef struct { DataType x, y; } POINT;
+typedef struct { DataType x, y; } POINT;
 POINT S[MAX_SIZE + 1];  // 模拟堆栈S,保存凸包上的点
 POINT POINT[MAX_SIZE + 1];
 double Distance(POINT a, POINT b)  // a和b之间的距离的平方
