@@ -24,7 +24,7 @@ void TopDownSplitMerge(const DataType B[], const int iBegin, const int iEnd, con
 // right half is A[iMiddle:iEnd-1   ]
 void TopDownMerge(const DataType A[], const int iBegin, const int iMiddle,
                   const int iEnd, const DataType B[]) {
-    i0 = iBegin, i1 = iMiddle;
+    int i0 = iBegin, i1 = iMiddle;
 
     // While there are elements in the left or right runs
     for (j = iBegin; j < iEnd; ++j) {
