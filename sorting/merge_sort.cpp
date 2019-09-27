@@ -14,7 +14,7 @@ void TopDownSplitMerge(const DataType B[], const int iBegin, const int iEnd, con
         return;             //   consider it sorted
     // recursively split runs into two halves until run size == 1,
     // then merge them and return back up the call chain
-    iMiddle = (iEnd + iBegin) / 2;              // iMiddle = mid point
+    int iMiddle = (iEnd + iBegin) / 2;              // iMiddle = mid point
     TopDownSplitMerge(A, iBegin, iMiddle, B);   // split / merge left  half
     TopDownSplitMerge(A, iMiddle, iEnd, B);     // split / merge right half
     TopDownMerge(B, iBegin, iMiddle, iEnd, A);  // merge the two half runs
