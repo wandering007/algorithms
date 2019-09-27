@@ -40,3 +40,6 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
 ## Needing improvements  
 - Convex hull Marriage-before-Conquest and 3D version  
 - Interval tree  
+
+## TODO  
+- [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling)
