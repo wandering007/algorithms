@@ -42,4 +42,5 @@ A collection of commonly used algorithms, written in C/C++, java, Python...
 - Interval tree  
 
 ## TODO  
-- [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling)
+- Randomized Algorithms: [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling)   
+- Number Theory: [Catalan number](https://en.wikipedia.org/wiki/Catalan_number) . 
