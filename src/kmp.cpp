@@ -9,9 +9,7 @@ void kmp_table(char* W, int* T) {
     // cnd: the zero-based index in W of the next character of the current
     // candidate substring
     int pos = 2, cnd = 0;
-    // the first few values are fixed but different from what the algorithm
-    // might suggest
-    T[0] = -1;
+    T[0] = 0;
     T[1] = 0;
     int lenW = strlen(W);
     while (pos < lenW) {
@@ -41,17 +39,18 @@ int kmp_search(char* S, char* W)
 // an array of characters, W (the word sought)
 {
     int m = 0, i = 0, lenS = strlen(S), lenW = strlen(W);
+    if(0 == lenW) {
+        return 0; // TODO: should be zero?
+    }
     while (m + i < lenS) {
         if (W[i] == S[m + i]) {
             if (i == lenW - 1) return m;  // matched, return the starting point
             i++;
-        } else if (T[i] > -1) {
-            // or i == 0
+        } else if(i > 0){
             m = m + i - T[i];
             i = T[i];
-        } else {
-            // i = 0;
-            m++;
+        }else {
+            ++m;
         }
     }
     // if we reach here, we have searched all of S unsuccessfully, return -1
